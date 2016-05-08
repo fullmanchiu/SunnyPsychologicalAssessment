@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SunnyPsychologicalAssessment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tabbar_text_news">资讯</string>
+    <string name="tabbar_text_test">测试</string>
+    <string name="tabbar_text_history">记录</string>
+    <string name="tabbar_text_other">其他</string>
+    <string name="fg_news_tv">资讯</string>
+    <string name="fg_test_tv">测试</string>
+    <string name="fg_history_tv">历史记录</string>
+    <string name="fg_other_tv">其他</string>
+</resources>
