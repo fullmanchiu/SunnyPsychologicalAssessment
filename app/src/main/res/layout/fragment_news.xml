@@ -2,12 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="12dp"
     tools:context="com.colofans.sunnypsychologicalassessment.fragment.NewsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/news_lv"
+        android:background="@color/bg_gray"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/fg_news_tv" />
+        android:layout_height="wrap_content">
+
+    </ListView>
 
 </FrameLayout>

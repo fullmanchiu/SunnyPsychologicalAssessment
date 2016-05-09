@@ -11,4 +11,29 @@
     <string name="fg_test_tv">测试</string>
     <string name="fg_history_tv">历史记录</string>
     <string name="fg_other_tv">其他</string>
+    <string name="tabbar_text_consult">咨询</string>
+    <string name="fg_consult_about">心里咨询室XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。欢迎大家来骚扰。</string>
+    <string name="address">地址：XXXXXX</string>
+    <string name="tel">电话：xxxxx</string>
+    <string name="email">Email:asasss@aaaa.com</string>
+    <string name="qq">QQ:XXXXXX</string>
+    <string name="wechat">微信:xxxxx</string>
+    <string name="new2_text">当你心情糟糕时，你的同事可能会成为压死骆驼的最后一根“稻草”。工作压力、家庭矛盾、爱情问题，或是身边琐事，由于上述任何原因，使你心烦意乱、怒气冲天的时候，那你的同事很有可能会遭受池鱼之灾。所以，当下次你要对同事“爆发”时，请记住以下职场专家提供的“金玉良言”帮助你摆脱冲突，重获和平，使相处变得愉快。
+　　冷静resolutionworks创始人stewart levin表示：如果冲突的结局是分出胜负，那么意味着两败俱伤，这种结局通常会把战火烧得更猛更持久，更别提解决冲突了。
+　　与其和同事剑拔弩张，最好先尝试进行一段冷静、有建设性的对话，两人借对话达成共识，使双方都满意而归。如果用这个方法，双方都是赢家.
+　　找到问题根源,你想和隔壁工作间的同事讨论紧急工作，但她却在打私人电话，但这并不是会成为你怒火中烧的真正原因。一个“讨人厌”的行为很少是冲突的真正根源。
+　　“如果冲突的根源是‘本已破坏的工作关系’，那么绝大多数试图解决本次冲突的方法都无济于事。”levine表示。在试图解决问题之前，先明确冲突“源”何而来吧。
+　　锻炼情绪
+　　“当一个人情绪低落，他的记忆力、注意力、学习能力和决策能力都会下降。”daniel goleman在emotional intelligence中表示。以下是三个通过锻炼情绪帮助你解决办公室冲突的有效之法：
+　　换位思考：想想你对别人的批评会产生什么样的效果。如果你言辞中透露出侮辱同事蠢笨、懒惰、轻率之意，你得到的只能是别人更强烈的攻击和厌恶。与同事们相处时要换位思考，解决问题才是目的，不要挟私报复。
+　　考虑他人工作风格：试着不要因为他人工作方式与你不同就心生愤怒。
+　　学会有效谈判：尝试通过冷静对话，了解你和你的同事希望达到怎样的工作效果，然后共同协商策略来实现。
+　　管理压力
+　　自身的压力会使我们暴躁易怒。wiser ways to work管理咨询公司总裁gloria dunn认为“工作场所就是烦恼制造者的聚居地。”她建议大家使用以下几种策略来学习控制、管理压力：
+　　每天划出一部分时间远离他人打扰。
+　　学会说“不”。建立一些界限，并坚持遵守。
+　　创造舒适愉悦的工作环境，让工作环境给你力量。
+　　每天锻炼身体。
+　　其实，最好的避免办公室冲突的方式就是拒绝卷入相处过程的争吵中。一个“巴掌拍不响”，如果你头脑清醒、观点鲜明、对同事态度不卑不亢、热情洋溢，与大家和睦共处便不成问题。</string>
+    <string name="default_text">here is a text</string>
 </resources>

@@ -1,11 +1,11 @@
 package com.colofans.sunnypsychologicalassessment.fragment;
 
-import java.util.ArrayList;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+
+import java.util.ArrayList;
 
 
 public class FragmentController {
@@ -33,7 +33,7 @@ public class FragmentController {
 		fragments = new ArrayList<Fragment>();
 		fragments.add(new NewsFragment());
 		fragments.add(new TestFragment());
-		fragments.add(new HistoryFragment());
+		fragments.add(new ConsultFragment());
 		fragments.add(new OtherFragment());
 		
 		FragmentTransaction ft = fm.beginTransaction();
