@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS scale (
+	sid integer PRIMARY KEY AUTOINCREMENT,
+	name TEXT,
+	description TEXT,
+	length INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS question (
+	sid INTEGER,
+	qid INTEGER,
+	title TEXT,
+	optionA TEXT,
+	optionB TEXT,
+	optionC TEXT,
+	optionD TEXT,
+	optionE TEXT,
+	weightA INTEGER,
+	weightB INTEGER,
+	weightC INTEGER,
+	weightD INTEGER,
+	weightE INTEGER
+)

@@ -19,7 +19,7 @@ public class TestNoticeActivity extends AppCompatActivity {
     private Button btn;
     private int[] img;
     private String[] testCaseDescribe;
-    private TestCase testCase;
+    private TestScale testScale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class TestNoticeActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(IntentFactory.testNotice2Test(getParent(), testCase));
+                startActivity(IntentFactory.testNotice2Test(getParent(), testScale));
             }
         });
     }
