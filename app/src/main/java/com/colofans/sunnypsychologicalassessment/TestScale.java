@@ -11,6 +11,7 @@ public class TestScale implements Serializable {
     private String testScaleTitle;
     private int testScaleLength;
     private String testScaleDescribe;
+    private int testScaleResultScore;
     private String testScaleResult;
     private ArrayList<TestScaleQuestion> questions;
 
@@ -21,6 +22,7 @@ public class TestScale implements Serializable {
         this.testScaleDescribe = testScaleDescribe;
         this.questions = questions;
     }
+
 
     public int getTestScaleId() {
         return testScaleId;
@@ -68,5 +70,13 @@ public class TestScale implements Serializable {
 
     public void setQuestions(ArrayList<TestScaleQuestion> questions) {
         this.questions = questions;
+    }
+
+    public int getTestScaleResultScore() {
+        return testScaleResultScore;
+    }
+
+    public void setTestScaleResultScore(int testScaleResultScore) {
+        this.testScaleResultScore = testScaleResultScore;
     }
 }

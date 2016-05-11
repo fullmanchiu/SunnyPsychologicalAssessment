@@ -21,7 +21,9 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".NewsActivity" />
-        <activity android:name=".TestNoticeActivity"></activity>
+        <activity android:name=".TestNoticeActivity" />
+        <activity android:name=".TestActivity" />
+        <activity android:name=".TestResultActivity"></activity>
     </application>
 
 </manifest>
