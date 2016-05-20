@@ -42,8 +42,24 @@
     <string name="option_c">optionC</string>
     <string name="option_d">optionD</string>
     <string name="option_e">optionE</string>
+    <string name="yale_level0">无强迫行为</string>
     <string name="yale_level1">轻度严重6－15分(单纯的强迫思维或强迫行为，仅需要6-9分)   　　处于轻度严重的强迫症患者，其症状已经对患者的生活、学习或职业开始造成一定的影响，患者的症状会随着环境和情绪的变化不断的波动，如果不能尽早的解决，很容易会朝着严重的程度发展、泛化，此时是治疗效果最理想的时期，建议尽早治疗。</string>
     <string name="yale_level2">中度严重16－25分(单纯的强迫思维或强迫行为，仅需要10-14分)   　　这属于中等的强迫症状，表示症状的频率或严重程度已经对生活、学习或职业造成明显的障碍，导致患者可能无法有效执行其原有的角色功能，甚至在没有出现有效的改善前，可能导致抑郁症状，甚至出现自杀念头，必须接受心理治疗或者药物治疗。</string>
     <string name="yale_level3">重度严重25分以上(单纯的强迫思维或强迫行为，仅需要15分以上)   　　此时，患者的强迫症状已经非常严重，完全无法执行原有的角色功能，甚至连衣食住行等生活功能都无法进行。通常患者已经无法出门，将自己禁锢家中，无时无刻都有强迫思考，无时无刻都在执行强迫行为。重度严重的患者极易出现抑郁症状，通常需要强制治疗。</string>
     <string name="save_result">保存</string>
+    <string name="result_score">测试得分：</string>
+    <string name="fg_record_tv">测试记录为空</string>
+    <string name="sas_lever0">你没有焦虑症状。</string>
+    <string name="sas_lever1">你有轻度焦虑症，可以自我调整心态，放松心情。</string>
+    <string name="sas_lever2">你有中度焦虑症，需要寻求心理咨询。</string>
+    <string name="sas_lever3">你有重度焦虑症，需要及时就医。</string>
+    <string name="gses_lever0">你非常缺乏自信心，需要自我调整心态。</string>
+    <string name="gses_lever1">你略微缺乏自信心，后续从各种事情上给自己重新定位。</string>
+    <string name="gses_lever2">你的自信心处于正常范围之内。</string>
+    <string name="gses_lever3">你的自信心非常高，但要正确看待自己的缺点。</string>
+    <string name="sds_lever0">无抑郁症 0-52</string>
+    <string name="sds_lever1">轻度抑郁：53—62</string>
+    <string name="sds_lever2">中度抑郁：63 — 72</string>
+    <string name="sds_lever3">重度抑郁：>72</string>
+
 </resources>

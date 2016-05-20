@@ -7,6 +7,10 @@ import java.util.ArrayList;
  * Created by Castor on 2016/5/11.
  */
 public class TestScale implements Serializable {
+    public static final String SCALE_YALE = "yale";
+    public static final String SCALE_SAS = "sas";
+    public static final String SCALE_GSES = "gses";
+    public static final String SCALE_SDS = "sds";
     private int testScaleId;
     private String testScaleTitle;
     private int testScaleLength;
@@ -14,6 +18,7 @@ public class TestScale implements Serializable {
     private int testScaleResultScore;
     private String testScaleResult;
     private ArrayList<TestScaleQuestion> questions;
+
 
     public TestScale(int testScaleId, String testScaleTitle, int testScaleLength, String testScaleDescribe, ArrayList<TestScaleQuestion> questions) {
         this.testScaleId = testScaleId;
@@ -78,5 +83,18 @@ public class TestScale implements Serializable {
 
     public void setTestScaleResultScore(int testScaleResultScore) {
         this.testScaleResultScore = testScaleResultScore;
+    }
+
+    @Override
+    public String toString() {
+        return "TestScale{" +
+                "testScaleId=" + testScaleId +
+                ", testScaleTitle='" + testScaleTitle + '\'' +
+                ", testScaleLength=" + testScaleLength +
+                ", testScaleDescribe='" + testScaleDescribe + '\'' +
+                ", testScaleResultScore=" + testScaleResultScore +
+                ", testScaleResult='" + testScaleResult + '\'' +
+                ", questions=" + questions +
+                '}';
     }
 }

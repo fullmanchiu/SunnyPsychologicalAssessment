@@ -47,7 +47,8 @@ public class FragmentController {
 		hideFragments();
 		Fragment fragment = fragments.get(position);
 		FragmentTransaction ft = fm.beginTransaction();
-		ft.show(fragment);
+		//ft.show(fragment);
+		ft.attach(fragment);
 		ft.commit();
 	}
 	
@@ -55,7 +56,8 @@ public class FragmentController {
 		FragmentTransaction ft = fm.beginTransaction();
 		for(Fragment fragment : fragments) {
 			if(fragment != null) {
-				ft.hide(fragment);
+				//ft.hide(fragment);
+				ft.detach(fragment);
 			}
 		}
 		ft.commit();

@@ -53,11 +53,19 @@ public class IntentFactory {
         Log.i("Lance", testScale.getTestScaleDescribe());
         intent = new Intent();
         intent.setClass(context, TestResultActivity.class);
-        //Bundle bundle = new Bundle();
-        //bundle.putSerializable("testScale1", testScale);
-        intent.putExtra("name", testScale.getTestScaleDescribe());
-        //intent.putExtra("resultcore",testScale.getTestScaleResultScore());
-        intent.putExtra("result", testScale.getTestScaleResult());
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("testScale", testScale);
+        intent.putExtras(bundle);
+        //intent.putExtra("name", testScale.getTestScaleDescribe());
+        //intent.putExtra("score",testScale.getTestScaleResultScore());
+        //intent.putExtra("result", testScale.getTestScaleResult());
+        //Log.i("Lance","score:"+)
+        return intent;
+    }
+
+    public static Intent testResult2Record(Context mContext) {
+        intent = new Intent();
+        intent.setClass(mContext, MainActivity.class);
         return intent;
     }
 }

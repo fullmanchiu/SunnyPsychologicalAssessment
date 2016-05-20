@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="test_case">
-        <item>YALE—BROWN强迫量表</item>
-        <item>焦虑自评量表</item>
-        <item>卡特尔十六种个性因素测验16PF</item>
-        <item>一般自我效能感量表</item>
-        <item>抑郁自评量表（SDS）</item>
-    </string-array>
     <string-array name="consult_way">
         <item>地址：xxxxx</item>
         <item>电话：xxxxx</item>

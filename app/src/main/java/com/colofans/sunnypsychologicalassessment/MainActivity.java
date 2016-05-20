@@ -1,5 +1,9 @@
 package com.colofans.sunnypsychologicalassessment;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.Toolbar;
@@ -20,6 +24,15 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
         controller = FragmentController.getInstance(this, R.id.fragment);
         controller.showFragment(0);
         initView();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("android.intent.action.ReflashList");
+//注册receiver
+        registerReceiver(new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                controller.showFragment(3);
+            }
+        }, filter);
     }
 
     private void initView() {
@@ -28,6 +41,11 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
         toolbarTv = (TextView) toolbar.findViewById(R.id.toolbar_tv);
         toolbarTv.setText(getText(R.string.tabbar_text_news));
         mRadioGroup.setOnCheckedChangeListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     @Override

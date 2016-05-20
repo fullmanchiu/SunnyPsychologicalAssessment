@@ -11,7 +11,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.colofans.sunnypsychologicalassessment.R;
+import com.colofans.sunnypsychologicalassessment.db.TestService;
 import com.colofans.sunnypsychologicalassessment.utils.IntentFactory;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,14 +22,17 @@ import com.colofans.sunnypsychologicalassessment.utils.IntentFactory;
 public class TestFragment extends BaseFragment {
     private View view;
     private ListView listView;
-    private String[] data;
+    private ArrayList<String> data;
+    TestService testService;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = View.inflate(activity, R.layout.fragment_test, null);
         listView = (ListView) view.findViewById(R.id.test_lv);
-        data = getResources().getStringArray(R.array.test_case);
+        testService = new TestService(activity);
+        data = testService.getTableLabel();
+        //data = getResources().getStringArray(R.array.test_case);
         listView.setAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, data));
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

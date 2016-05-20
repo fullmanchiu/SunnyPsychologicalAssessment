@@ -2,12 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context="com.colofans.sunnypsychologicalassessment.fragment.OtherFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/fragment_other_tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/fg_other_tv" />
+        android:text="@string/fg_record_tv" />
+
+    <ListView
+        android:id="@+id/fragment_other_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"></ListView>
 
 </FrameLayout>

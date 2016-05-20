@@ -16,8 +16,15 @@
         android:text="@string/default_text" />
 
     <TextView
-        android:id="@+id/test_result_summary"
+        android:id="@+id/test_result_score"
         android:layout_below="@+id/test_result_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/result_score" />
+
+    <TextView
+        android:id="@+id/test_result_summary"
+        android:layout_below="@+id/test_result_score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/default_text" />

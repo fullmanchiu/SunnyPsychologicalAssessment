@@ -16,6 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "test.db";
     private static final int DATABASE_VERSION = 1;
     private static final String CREATE_TABLE = "create table IF NOT EXISTS SCALE(sid integer primary key autoincrement,name TEXT,description TEXT,length INTEGER)";
+    private static final String CREATE_RECORD_TABLE = "CREATE TABLE IF NOT EXISTS records ( name TEXT, score TEXT, summary TEXT )";
     private Context mContext; //text shiyihui
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

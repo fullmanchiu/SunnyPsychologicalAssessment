@@ -20,7 +20,7 @@ public class TestActivity extends AppCompatActivity {
     private TextView tv;
     private Button btn;
     private RadioGroup rg;
-    private RadioButton rb1, rb2, rb3, rb4, rb5, rb6;
+    private RadioButton rb1, rb2, rb3, rb4, rb5;
     private int result;
     private int index = 0;
     private TestScale testScale;
@@ -72,6 +72,7 @@ public class TestActivity extends AppCompatActivity {
                         Log.i("Lance", "resulte:" + result);
                         break;
                     default:
+                        rb1.setChecked(true);
                         break;
                 }
                 Log.i("Lance", "result:" + result);
@@ -82,20 +83,24 @@ public class TestActivity extends AppCompatActivity {
             public void onClick(View v) {
                 index++;
                 Log.i("Lance", "index:" + index);
-                if (index < 10) {
-                    rg.clearCheck();
-                    results.add(result);
-                    tv.setText(testScale.getQuestions().get(index).getQuestionTitle());
-                    rb1.setText(testScale.getQuestions().get(index).getOptionA());
-                    rb2.setText(testScale.getQuestions().get(index).getOptionB());
-                    rb3.setText(testScale.getQuestions().get(index).getOptionC());
-                    rb4.setText(testScale.getQuestions().get(index).getOptionD());
-                    rb5.setText(testScale.getQuestions().get(index).getOptionE());
+                if (index == testScale.getTestScaleLength() - 1) {
+                    btn.setText("完成");
                 }
-                if (index >= 10) {
-                    getResult(getResultScore(results));
+                if (index < testScale.getTestScaleLength()) {
+                    results.add(result);
+                    rg.clearCheck();
+                    tv.setText(index + 1 + "." + testScale.getQuestions().get(index).getQuestionTitle());
+                    rb1.setText("A:" + testScale.getQuestions().get(index).getOptionA());
+                    rb2.setText("B:" + testScale.getQuestions().get(index).getOptionB());
+                    rb3.setText("C:" + testScale.getQuestions().get(index).getOptionC());
+                    rb4.setText("D:" + testScale.getQuestions().get(index).getOptionD());
+                    rb5.setText("E:" + testScale.getQuestions().get(index).getOptionE());
+                }
+                if (index >= testScale.getTestScaleLength()) {
+                    getResult(testScale.getTestScaleId(), getResultScore(results));
                     Log.i("Lance", testScale.getTestScaleTitle());
                     startActivity(IntentFactory.test2Result(mContext, testScale));
+                    finish();
                 }
             }
 
@@ -103,16 +108,59 @@ public class TestActivity extends AppCompatActivity {
         });
     }
 
-    private void getResult(int resultScore) {
+    private void getResult(int testScaleId, int resultScore) {
+
         String resultSumarry = null;
-        if (resultScore >= 6 && resultScore <= 15) {
-            resultSumarry = getResources().getString(R.string.yale_level1);
-        } else if (resultScore >= 16 && resultScore <= 25) {
-            resultSumarry = getResources().getString(R.string.yale_level2);
-        } else if (resultScore > 25) {
-            resultSumarry = getResources().getString(R.string.yale_level3);
+        switch (testScaleId) {
+            case 1:
+                if (resultScore >= 0 && resultScore <= 5) {
+                    resultSumarry = getResources().getString(R.string.yale_level0);
+                } else if (resultScore >= 6 && resultScore <= 15) {
+                    resultSumarry = getResources().getString(R.string.yale_level1);
+                } else if (resultScore >= 16 && resultScore <= 25) {
+                    resultSumarry = getResources().getString(R.string.yale_level2);
+                } else if (resultScore > 25) {
+                    resultSumarry = getResources().getString(R.string.yale_level3);
+                }
+                break;
+            case 2:
+                if (resultScore >= 0 && resultScore < 50) {
+                    resultSumarry = getResources().getString(R.string.sas_lever0);
+                } else if (resultScore >= 50 && resultScore <= 60) {
+                    resultSumarry = getResources().getString(R.string.sas_lever1);
+                } else if (resultScore >= 61 && resultScore <= 70) {
+                    resultSumarry = getResources().getString(R.string.sas_lever2);
+                } else if (resultScore >= 71) {
+                    resultSumarry = getResources().getString(R.string.sas_lever3);
+                }
+                break;
+            case 3:
+                if (resultScore >= 0 && resultScore < 15) {
+                    resultSumarry = getResources().getString(R.string.gses_lever0);
+                } else if (resultScore >= 16 && resultScore <= 24) {
+                    resultSumarry = getResources().getString(R.string.gses_lever1);
+                } else if (resultScore >= 25 && resultScore <= 29) {
+                    resultSumarry = getResources().getString(R.string.gses_lever2);
+                } else if (resultScore >= 30) {
+                    resultSumarry = getResources().getString(R.string.gses_lever3);
+                }
+                break;
+            case 4:
+                resultScore = (int) (resultScore * 1.25);
+                if (resultScore >= 0 && resultScore < 52) {
+                    resultSumarry = getResources().getString(R.string.sds_lever0);
+                } else if (resultScore >= 53 && resultScore <= 62) {
+                    resultSumarry = getResources().getString(R.string.sds_lever1);
+                } else if (resultScore >= 63 && resultScore <= 72) {
+                    resultSumarry = getResources().getString(R.string.sds_lever2);
+                } else if (resultScore >= 73) {
+                    resultSumarry = getResources().getString(R.string.sds_lever3);
+                }
+                break;
         }
+
         testScale.setTestScaleResult(resultSumarry);
+        testScale.setTestScaleResultScore(resultScore);
     }
 
 
@@ -135,11 +183,26 @@ public class TestActivity extends AppCompatActivity {
         rb3 = (RadioButton) findViewById(R.id.option_c);
         rb4 = (RadioButton) findViewById(R.id.option_d);
         rb5 = (RadioButton) findViewById(R.id.option_e);
-        tv.setText(testScale.getQuestions().get(index).getQuestionTitle());
-        rb1.setText(testScale.getQuestions().get(index).getOptionA());
-        rb2.setText(testScale.getQuestions().get(index).getOptionB());
-        rb3.setText(testScale.getQuestions().get(index).getOptionC());
-        rb4.setText(testScale.getQuestions().get(index).getOptionD());
-        rb5.setText(testScale.getQuestions().get(index).getOptionE());
+
+
+        tv.setText("1." + testScale.getQuestions().get(index).getQuestionTitle());
+        rb1.setText("A:" + testScale.getQuestions().get(index).getOptionA());
+        rb2.setText("B:" + testScale.getQuestions().get(index).getOptionB());
+        rb3.setText("C:" + testScale.getQuestions().get(index).getOptionC());
+        rb4.setText("D:" + testScale.getQuestions().get(index).getOptionD());
+        rb5.setText("E:" + testScale.getQuestions().get(index).getOptionE());
+        ArrayList<RadioButton> radioButtons = new ArrayList<>();
+        radioButtons.add(rb1);
+        radioButtons.add(rb2);
+        radioButtons.add(rb3);
+        radioButtons.add(rb4);
+        radioButtons.add(rb5);
+        for (RadioButton radioButton : radioButtons) {
+            Log.i("Lance", radioButton.getText().toString().substring(0, 2));
+            if (radioButton.getText().toString().substring(2, radioButton.getText().length()).equals("")) {
+                Log.i("Lance", "radioButton is empty");
+                radioButton.setVisibility(View.INVISIBLE);
+            }
+        }
     }
 }
