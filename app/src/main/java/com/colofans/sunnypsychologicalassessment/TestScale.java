@@ -11,6 +11,7 @@ public class TestScale implements Serializable {
     public static final String SCALE_SAS = "sas";
     public static final String SCALE_GSES = "gses";
     public static final String SCALE_SDS = "sds";
+    public static final String SCALE_EQ = "eq";
     private int testScaleId;
     private String testScaleTitle;
     private int testScaleLength;

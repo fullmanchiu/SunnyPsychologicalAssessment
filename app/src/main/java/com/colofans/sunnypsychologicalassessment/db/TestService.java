@@ -105,6 +105,8 @@ public class TestService {
             case 3:
                 tableName = TestScale.SCALE_SDS;
                 break;
+            case 4:
+                tableName = TestScale.SCALE_EQ;
         }
         return tableName;
     }

@@ -31,5 +31,8 @@ public class NewsActivity extends AppCompatActivity {
         Drawable drawable = getResources().getDrawable(news.getNewsImg());
         iv.setBackground(drawable);
         tv.setText(news.getNewsSummary());
+
     }
+
+
 }

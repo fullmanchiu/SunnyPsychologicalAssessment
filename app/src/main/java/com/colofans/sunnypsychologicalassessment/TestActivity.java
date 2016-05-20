@@ -157,6 +157,16 @@ public class TestActivity extends AppCompatActivity {
                     resultSumarry = getResources().getString(R.string.sds_lever3);
                 }
                 break;
+            case 5:
+                if (resultScore >= 0 && resultScore < 40) {
+                    resultSumarry = getResources().getString(R.string.eq_lever0);
+                } else if (resultScore >= 41 && resultScore <= 80) {
+                    resultSumarry = getResources().getString(R.string.eq_lever1);
+                } else if (resultScore >= 81 && resultScore <= 100) {
+                    resultSumarry = getResources().getString(R.string.eq_lever2);
+                }
+                break;
+
         }
 
         testScale.setTestScaleResult(resultSumarry);

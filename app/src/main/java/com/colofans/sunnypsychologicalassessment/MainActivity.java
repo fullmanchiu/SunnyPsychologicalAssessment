@@ -65,7 +65,7 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
                 break;
             case R.id.rb_other:
                 controller.showFragment(3);
-                toolbarTv.setText(getText(R.string.tabbar_text_other));
+                toolbarTv.setText(getText(R.string.tabbar_text_record));
                 break;
             default:
                 break;

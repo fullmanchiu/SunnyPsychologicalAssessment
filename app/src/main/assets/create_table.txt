@@ -3,4 +3,5 @@ CREATE TABLE IF NOT EXISTS yale ( qid INTEGER, title TEXT, optionA TEXT, optionB
 CREATE TABLE IF NOT EXISTS sas ( qid INTEGER, title TEXT, optionA TEXT, optionB TEXT, optionC TEXT, optionD TEXT, optionE TEXT, weightA INTEGER, weightB INTEGER, weightC INTEGER, weightD INTEGER, weightE INTEGER );
 CREATE TABLE IF NOT EXISTS gses ( qid INTEGER, title TEXT, optionA TEXT, optionB TEXT, optionC TEXT, optionD TEXT, optionE TEXT, weightA INTEGER, weightB INTEGER, weightC INTEGER, weightD INTEGER, weightE INTEGER );
 CREATE TABLE IF NOT EXISTS sds ( qid INTEGER, title TEXT, optionA TEXT, optionB TEXT, optionC TEXT, optionD TEXT, optionE TEXT, weightA INTEGER, weightB INTEGER, weightC INTEGER, weightD INTEGER, weightE INTEGER );
+CREATE TABLE IF NOT EXISTS eq ( qid INTEGER, title TEXT, optionA TEXT, optionB TEXT, optionC TEXT, optionD TEXT, optionE TEXT, weightA INTEGER, weightB INTEGER, weightC INTEGER, weightD INTEGER, weightE INTEGER );
 CREATE TABLE IF NOT EXISTS records (id integer PRIMARY KEY AUTOINCREMENT, name TEXT, score TEXT, summary TEXT );

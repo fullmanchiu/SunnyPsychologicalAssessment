@@ -61,5 +61,9 @@
     <string name="sds_lever1">轻度抑郁：53—62</string>
     <string name="sds_lever2">中度抑郁：63 — 72</string>
     <string name="sds_lever3">重度抑郁：>72</string>
+    <string name="eq_lever0">EQ水平偏低，情绪常波动起伏，人际交往、处理问题及社会适应能力欠缺。但也毋需恐惧，应当找出薄弱环节，有针对性地加强自我修养和锻炼，以不断提高自己的情商水平与综合素质。</string>
+    <string name="eq_lever1">EQ水平居中，尚需保持和发扬优势面，克服不足，不断提高。</string>
+    <string name="eq_lever2">EQ水平较高，情绪稳定，乐观自信，客观冷静，人际交往、处理问题及社会适应能力较强，是一种积极健康的心理状态。</string>
+    <string name="tabbar_text_record">记录</string>
 
 </resources>
